@@ -6,6 +6,7 @@ The official fluentd container with the `secure_forward` plugin enabled.
 ```
 $ docker run -d -ti \
   --name fluentd_agent \
+  --hostname "$(hostname -f)" \
   -p 127.0.0.1:24224:24224 \
   -e FLUENTD_TARGET=fluentd.somehost.com \
   -e FLUENTD_SECRET=ABC123 \
